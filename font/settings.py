@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'font.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'name',
-        'USER': 'user',
-        'PASSWORD': '',
-        'HOST': 'host',
-        'PORT': '',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'mtmtkk1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
