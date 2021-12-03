@@ -78,16 +78,28 @@ WSGI_APPLICATION = 'font.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd752ncf72othqk',
-        'USER': 'zyvgxdjbdimcts',
-        'PASSWORD': '0229bf12b5b712bd1d494617fb966eb549527fa8e078c9f99a522dfd9de28b11',
-        'HOST': 'ec2-3-211-228-251.compute-1.amazonaws.com',
-        'PORT': '5432',
+from socket import gethostname
+hostname = gethostname()
+
+if "DESKTOP-96OCK56" in hostname:
+    # デバッグ環境
+    # DEBUG = True 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+    ALLOWED_HOSTS = ['*'] 
+else:
+    # 本番環境
+    # DEBUG = False
+    import dj_database_url
+    db_from_env = dj_database_url.config()
+    DATABASES = {
+        'default': dj_database_url.config()
+    }
+    ALLOWED_HOSTS = ['*']
 
 
 # Password validation
