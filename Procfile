@@ -1,1 +1,1 @@
-"web: $(basename `pwd`)" 
+web: gunicorn font.wsgi --log-file - 
