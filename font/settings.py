@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'easy_thumbnails',
     'image_cropping',
     'django_cleanup.apps.CleanupConfig',
 ]
