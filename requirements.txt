@@ -17,6 +17,7 @@ Keras-Preprocessing==1.1.2
 numpy==1.21.1
 opencv-python==4.5.4.60
 Pillow==8.2.0
+matplotlib==3.4.2
 pipdeptree==2.0.0
 pipenv==2021.11.23
 sqlite-bro==0.9.3
