@@ -43,7 +43,7 @@ imbalanced-learn==0.8.0
 importlib-metadata==4.5.0
 keras==2.7.0
 Keras-Preprocessing==1.1.2
-numpy==1.21.0+mkl
+numpy==1.21.1
 opencv-python==4.5.4.60
 openpyxl==3.0.7
 outcome==1.1.0
@@ -83,7 +83,6 @@ proglog==0.1.9
 prometheus-client==0.11.0
 promise==2.3
 prompt-toolkit==3.0.19
-protobuf==4.0.0rc1
 psutil==5.8.0
 psycopg2==2.9.2
 psycopg2-binary==2.9.2
@@ -131,7 +130,6 @@ pyparsing==2.4.7
 pyproj==3.1.0
 PyQt5==5.15.1
 PyQt5-sip==12.8.1
-pyqt5-tools==5.15.1.1.7.5.post3
 pyqtgraph==0.12.1
 PyQtWebEngine==5.15.1
 pyrsistent==0.17.3
@@ -143,7 +141,6 @@ pytest==6.2.4
 python-baseconv==1.2.2
 python-dateutil==2.8.1
 python-dotenv==0.17.0
-python-hdf4==0.10.0+dummy
 python-jsonrpc-server==0.4.0
 python-language-server==0.36.2
 python-Levenshtein==0.12.2
@@ -163,7 +160,6 @@ PyYAML==5.4.1
 pyzmq==22.1.0
 pyzo==4.11.2
 QDarkStyle==3.0.2
-qdldl==0.1.5.post0
 qpsolvers==1.6.1
 qstylizer==0.2.0
 QtAwesome==1.0.2
@@ -232,7 +228,6 @@ tornado==6.1
 tqdm==4.61.1
 traitlets==5.0.5
 traittypes==0.2.1
-tranquilizer==0.5.1a1
 trio==0.19.0
 trio-asyncio==0.12.0
 twine==3.4.1
