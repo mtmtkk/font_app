@@ -38,7 +38,7 @@ def crop(request):
             #return redirect('app:result')
 
     context = {'form':form}
-    return render(request, 'app/crop.html', context)
+    return render(request, 'app/crop.html')
 
 
 def result(request):
