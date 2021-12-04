@@ -28,6 +28,9 @@ DEBUG = False
 if not DEBUG:
     SECRET_KEY=os.environ.get('SECRET_KEY')
 
+ALLOWED_HOSTS = ['intense-hamlet-93690.herokuapp.com', '127.0.0.1']
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -79,7 +82,7 @@ WSGI_APPLICATION = 'font.wsgi.application'
 from socket import gethostname
 hostname = gethostname()
 
-HOSTNAME = 'DESKTOP-96OCK56'
+HOSTNAME = os.environ['HOSTNAME']
 
 if "HOSTNAME" in hostname:
     # デバッグ環境
@@ -167,5 +170,4 @@ DATABASES['default'].update(db_from_env)
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     django_heroku.settings(locals()) #追加
-
 
