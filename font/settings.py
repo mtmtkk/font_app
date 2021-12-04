@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import django_heroku #追加
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ DEBUG = False
 if not DEBUG:
     SECRET_KEY=os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['wfont.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['intense-hamlet-93690.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -168,7 +169,6 @@ DATABASES['default'].update(db_from_env)
 
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
-    import django_heroku #追加
     django_heroku.settings(locals()) #追加
 
 
