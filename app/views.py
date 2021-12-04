@@ -1,11 +1,12 @@
 from django.shortcuts import get_object_or_404,render,redirect
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse, HttpResponseServerError
 from django.urls import reverse
 
 from font.settings import MODEL_ROOT
 
 from .models import Image
 from .forms import ImageForm
+from django.views.decorators.csrf import requires_csrf_token
 from django.views.decorators.http import require_POST
 import os
 import tempfile
@@ -67,3 +68,10 @@ def result(request):
     }
 
     return render(request, 'app/result.html',context)
+
+@requires_csrf_token
+def my_customized_server_error(request, template_name='500.html'):
+    import sys
+    from django.views import debug
+    error_html = debug.technical_500_response(request, *sys.exc_info()).content
+    return HttpResponseServerError(error_html)
