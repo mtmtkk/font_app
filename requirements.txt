@@ -63,11 +63,6 @@ PuLP==2.3
 py==1.10.0
 py-lru-cache==0.1.4
 pycparser==2.20
-pyct==0.4.8
-pydantic==1.7.4
-pydeck==0.6.2
-pygame==2.0.1
-pygbm==0.1.0
 Pygments==2.9.0
 sqlite-bro==0.9.3
 sqlite-utils==1.9
@@ -80,7 +75,6 @@ supersmoother==0.4
 svglib==1.1.0
 sympy==1.8
 tables==3.6.1
-tabulate==0.8.9
 tblib==1.7.0
 tenacity==7.0.0
 tensorboard==2.7.0
