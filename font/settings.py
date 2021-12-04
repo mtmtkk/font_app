@@ -100,6 +100,7 @@ else:
         'default': dj_database_url.config()
     }
     ALLOWED_HOSTS = ['*']
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Password validation
