@@ -15,7 +15,7 @@ importlib-metadata==4.5.0
 keras==2.7.0
 Keras-Preprocessing==1.1.2
 numpy==1.21.1
-opencv-python==4.5.4.60
+opencv-python--headless==4.5.4.60
 Pillow==8.2.0
 matplotlib==3.4.2
 pipdeptree==2.0.0
