@@ -4,7 +4,6 @@ from . import views
 from django.conf import settings
 from django.conf.urls import static, url
 from django.contrib import admin
-from font import views
 
 app_name = 'app'
 urlpatterns = [
