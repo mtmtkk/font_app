@@ -81,7 +81,9 @@ WSGI_APPLICATION = 'font.wsgi.application'
 from socket import gethostname
 hostname = gethostname()
 
-if "DESKTOP-96OCK56" in hostname:
+HOSTNAME = os.environ['HOSTNAME']
+
+if "HOSTNAME" in hostname:
     # デバッグ環境
     # DEBUG = True 
     DATABASES = {
