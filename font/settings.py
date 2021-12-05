@@ -172,4 +172,10 @@ DATABASES['default'].update(db_from_env)
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     django_heroku.settings(locals()) #追加
+    
+CLOUDINARY_STORAGE  = {
+    'CLOUD_NAME':'hriscwqpd',
+    'API_KEY':"env('CLOUDINARY_API_KEY')",
+    'API_SECRET':"env('CLOUDINARY_API_SECRET')"
+}
 
