@@ -33,6 +33,7 @@ def crop(request):
         print('not exist')
     form = ImageForm(request.POST or None, request.FILES or None)
     if form.is_valid():
+            form.image = request.FILES['picture']
             form.save()
             return JsonResponse({'massage': 'works'})
             #return redirect('app:result')
