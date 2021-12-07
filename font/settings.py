@@ -154,7 +154,7 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MODEL_ROOT = os.path.join(BASE_DIR, '1637117885')
 
 # Default primary key field type
