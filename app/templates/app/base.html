@@ -3,18 +3,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- cropper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css">
-    <script src="{% static "font/main.js" %}"></script>
-    <link  href="{% static "style.css" %}" rel="stylesheet">
   </head>
   <body>
         <div class="containe mt-3">
             {% block content %}
             {% endblock content %}
         </div>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- cropper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.css">
+    <script src="{% static "font/main.js" %}"></script>
+    <link  href="{% static "font/style.css" %}" rel="stylesheet">
   </body>
 </html>
