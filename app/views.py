@@ -24,20 +24,10 @@ def index(request):
     return render(request, 'app/index.html')
 
 def crop(request):
-    # images = Image.objects.get(pk=1)
-    path = 'media/images/my-image.png'
-    is_file = os.path.isfile(path)
-    if is_file:
-        os.remove(path)
-    else:
-        print('not exist')
     form = ImageForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-            form.image = request.FILES['picture']
-            form.save()
-            return JsonResponse({'massage': 'works'})
-            #return redirect('app:result')
-
+        form.save()
+        return JsonResponse({'massage': 'works'})
     context = {'form':form}
     return render(request, 'app/crop.html', context)
 
