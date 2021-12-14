@@ -37,9 +37,7 @@ def result(request):
     name = np.array(['MS ゴシック','MS 明朝','メイリオ','游ゴシック','UDデジタル教科書体'],dtype=object)
 
     path = 'https://res.cloudinary.com/hriscwqpd/image/upload/v1638897819/media/images/my-image.png'
-    #is_file = os.path.isfile(path)
 
-    #if is_file:
     image = imread_web(path)
     image = cv2.resize(image,dsize=(224,224))
     image = image/255.0
@@ -49,9 +47,6 @@ def result(request):
     predictions_sort = np.argsort(predictions[0])[::-1]
     name_sort = name[predictions_sort]
     result_sort = predictions[0][predictions_sort]
-   # else:
-       # print('not exit')
-        #return render(request,'app/index.html')
 
     context = {
         'name':name_sort,
