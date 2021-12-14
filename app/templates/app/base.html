@@ -14,7 +14,7 @@
             {% block content %}
             {% endblock content %}
         </div>
-        <script src="{{STATIC_URL}}app/main.js"></script>
-        <link  href="{{STATIC_URL}}app/style.css" rel="stylesheet">
+        <script src="{% static 'app/main.js' %}"></script>
+        <link  href="{% static 'app/style.css' %}" rel="stylesheet">
   </body>
 </html>
