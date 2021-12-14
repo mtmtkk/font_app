@@ -17,8 +17,6 @@ input.addEventListener('change', () => {
   imageBox.innerHTML = `<img src="${url}" id="image" width="400px">`
   var $image = $('#image')
 
-  var $image = $('#image');
-
   $image.cropper({
 
     aspectRatio: 16 / 16,

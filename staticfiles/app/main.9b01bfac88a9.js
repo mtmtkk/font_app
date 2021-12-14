@@ -2,12 +2,12 @@ console.log('hello world')
 const alertBox = document.getElementById('alert-box')
 const imageBox = document.getElementById('image-box')
 const imageForm = document.getElementById('image-form')
-console.log(imageForm)
+
 const confirmBtn = document.getElementById('confirm-btn')
 const input = document.getElementById('id_picture')
 
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
-console.log(input)
+
 
 input.addEventListener('change', () => {
   console.log('changed')
@@ -18,8 +18,6 @@ input.addEventListener('change', () => {
 
   imageBox.innerHTML = `<img src="${url}" id="image" width="400px">`
   var $image = $('#image')
-
-  var $image = $('#image');
 
   $image.cropper({
 
