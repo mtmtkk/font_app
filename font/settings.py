@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'font.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-from socket import gethostname
-hostname = gethostname()
+#from socket import gethostname
+#hostname = gethostname()
 
-HOSTNAME = os.environ['HOSTNAME']
+#HOSTNAME = os.environ['HOSTNAME']
 
-if "HOSTNAME" in hostname:
+if DEBUG:
     # デバッグ環境
     # DEBUG = True 
     DATABASES = {
