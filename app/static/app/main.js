@@ -40,6 +40,7 @@ input.addEventListener('change', () => {
         const fd = new FormData();
         fd.append('csrfmiddlewaretoken', csrf[0].value)
         fd.append('picture', blob, 'my-image.png');
+        console.log(fd)
 
         $.ajax({
             type:'POST',

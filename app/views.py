@@ -27,6 +27,7 @@ def index(request):
 def crop(request):
     form = ImageForm(request.POST or None, request.FILES or None)
     if form.is_valid():
+        print("work")
         form.save()
         return JsonResponse({'massage': 'works'})
     context = {'form':form}
