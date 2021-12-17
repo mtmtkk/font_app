@@ -9,3 +9,52 @@
     text-decoration: none;
     color: white;
   }
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 60px auto 40px;
+}
+th {
+    background: #e9727e;
+    border: solid 1px #ccc;
+    color: #fff;
+    padding: 10px;
+}
+td {
+    border: solid 1px #ccc;
+    padding: 10px;
+ }
+
+ @media screen and (max-width: 640px) {
+    .tbl-r04 {
+      width: 80%;
+    } 
+    .tbl-r04 .thead {
+      display: none;
+    }
+    .tbl-r04 tr,
+    .tbl-r04 td{
+      display: block;
+      width: 100%;
+      position: relative;
+    }
+    .tbl-r04 td:first-child:before {
+      content: "見出し:before";
+      background: #e9727e;
+      box-sizing: border-box;
+      color: #fff;
+      font-weight: bold;
+      height: 40px;
+      padding: 10px;
+      position: absolute;
+      top: -41px;
+      left: -0.2%;
+      display: block;
+      width: 100.5%;
+    }
+    .tbl-r04 tr {
+      margin-bottom: 40px;
+    }
+  }

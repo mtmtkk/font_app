@@ -1,7 +1,7 @@
 <html>
     {% load cloudinary %}
 <head>
-    <title>フォント判別結果</title>
+    <title>フォント判別</title>
 </head>
 <body style="background:#ffffff">
 <header>
@@ -10,11 +10,19 @@
     </h1>
 </header>
 
-<table border="1" bgcolor="#e3eae9" width="100%">
-    <tr style="background:#167acb;color:#ffffff"><th>フォント名</th><th>確率</th></tr>
-    <tr style="color:#000000"><td align="center">{{name.0}}</td><td>{{result.0}}</td></tr>
-    <tr style="color:#000000"><td align="center">{{name.1}}</td><td>{{result.1}}</td></tr>
-    <tr style="color:#000000"><td align="center">{{name.2}}</td><td>{{result.2}}</td></tr>
+<table class= "tbl-04" border="1" bgcolor="#e3eae9" width="100%">
+    <tr class="thead">
+        <th>フォント名</th><th>確率</th>
+    </tr>
+    <tr>
+        <td>{{name.0}}</td><td>{{result.0}}</td>
+    </tr>
+    <tr>
+        <td>{{name.1}}</td><td>{{result.1}}</td>
+    </tr>
+    <tr>
+        <td>{{name.2}}</td><td>{{result.2}}</td>
+    </tr>
 </table>
 <h2 align="right"><a href="{% url 'app:index' %}">home</a></h2>
 </body>
