@@ -1,7 +1,9 @@
 from django.db import models
+import cloudinary
+from cloudinary.models import CloudinaryField
 
 class Image(models.Model):
-    picture = models.ImageField(upload_to='images')
+    picture = CloudinaryField('images', blank=True, null=True,)
     uploaded = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
