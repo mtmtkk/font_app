@@ -9,7 +9,7 @@
         <a>フォント判別結果</a>
     </h1>
 </header>
-{% cloudinary form.picture.name width=300 height=150 %}
+{% cloudinary image.picture.name width=300 height=150 %}
 <table border="1" bgcolor="#e3eae9" width="100%">
     <tr style="background:#167acb;color:#ffffff"><th>フォント名</th><th>確率</th></tr>
     <tr style="color:#000000"><td align="center">{{name.0}}</td><td>{{result.0}}</td></tr>
