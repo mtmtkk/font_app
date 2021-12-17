@@ -27,7 +27,6 @@ def index(request):
 def crop(request):
     form = ImageForm(request.POST or None, request.FILES or None)
     if form.is_valid():
-        print("work")
         form.save()
         return JsonResponse({'massage': 'works'})
     context = {'form':form}
@@ -37,7 +36,7 @@ def crop(request):
 def result(request):
     name = np.array(['MS ゴシック','MS 明朝','メイリオ','游ゴシック','UDデジタル教科書体'],dtype=object)
 
-    path = 'https://res.cloudinary.com/hriscwqpd/image/upload/v1638897819/media/images/my-image.png'
+    path = 'https://res.cloudinary.com/hriscwqpd/image/upload/v1639740962/my-image.png'
 
     image = imread_web(path)
     image = cv2.resize(image,dsize=(224,224))
