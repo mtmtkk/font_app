@@ -47,10 +47,12 @@ def result(request):
     predictions_sort = np.argsort(predictions[0])[::-1]
     name_sort = name[predictions_sort]
     result_sort = predictions[0][predictions_sort]
+    pic = Image.picture
 
     context = {
         'name':name_sort,
-        'result':result_sort
+        'result':result_sort,
+        'pic':pic,
     }
     return render(request, 'app/result.html',context)
 
